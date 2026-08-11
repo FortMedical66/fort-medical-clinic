@@ -1,0 +1,1342 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fort Medical Clinic | Family Medicine | Edmonton</title>
+
+  <meta
+    name="description"
+    content="Fort Medical Clinic is a family medicine practice in Edmonton, Alberta. Now accepting new patients. Walk-ins welcome during clinic hours."
+  >
+
+  <style>
+    :root {
+      --navy: #123b5d;
+      --blue: #1d78a8;
+      --light-blue: #eaf6fb;
+      --green: #0b7a5c;
+      --white: #ffffff;
+      --text: #243746;
+      --muted: #647482;
+      --light: #f5f9fb;
+      --border: #dce7ed;
+      --shadow: 0 10px 30px rgba(18, 59, 93, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .nav-button {
+      background: var(--blue);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 8px;
+    }
+
+    /* PATIENT ANNOUNCEMENT */
+
+    .announcement {
+      background: var(--green);
+      color: white;
+      border-bottom: 4px solid #075b45;
+    }
+
+    .announcement-content {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .announcement-icon {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      border-radius: 50%;
+      background: white;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .announcement strong {
+      display: block;
+      font-size: 1.2rem;
+      letter-spacing: .5px;
+    }
+
+    .announcement span {
+      display: block;
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .announcement a {
+      margin-left: auto;
+      background: white;
+      color: #075b45;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .announcement a:hover {
+      background: #eaf6fb;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(234,246,251,.98), rgba(255,255,255,.95));
+      padding: 90px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      font-weight: 700;
+      font-size: .9rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2.5rem, 6vw, 4.4rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--navy);
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--blue);
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card h2 {
+      color: var(--navy);
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 15px;
+      margin: 18px 0;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      border-radius: 50%;
+      background: var(--light-blue);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+    }
+
+    .info-row strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .info-row span {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 2.3rem;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .light-section {
+      background: var(--light);
+    }
+
+    /* SERVICES */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 5px 20px rgba(18,59,93,.04);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      background: var(--light-blue);
+      color: var(--blue);
+      border-radius: 12px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* DOCTORS */
+
+    .doctors-section {
+      background: #ffffff;
+    }
+
+    .doctor-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .doctor-card {
+      background: #f5f9fb;
+      border: 1px solid #dce7ed;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      box-shadow: 0 5px 20px rgba(18, 59, 93, 0.05);
+    }
+
+    .doctor-avatar {
+      width: 78px;
+      height: 78px;
+      flex: 0 0 78px;
+      border-radius: 50%;
+      background: #1d78a8;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .doctor-card h3 {
+      color: #123b5d;
+      font-size: 1.3rem;
+      margin-bottom: 3px;
+    }
+
+    .doctor-title {
+      color: #2d8a72;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      color: var(--navy);
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .check-list li {
+      margin: 13px 0;
+      padding-left: 30px;
+      position: relative;
+      color: var(--text);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .about-box {
+      background: var(--navy);
+      color: white;
+      padding: 45px;
+      border-radius: 20px;
+    }
+
+    .about-box h3 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+
+    .about-box p {
+      color: #dceaf2;
+    }
+
+    /* HOURS */
+
+    .hours-wrapper {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 25px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hours-row:last-child {
+      border-bottom: 0;
+    }
+
+    .hours-row strong {
+      color: var(--navy);
+    }
+
+    .hours-row span {
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--light-blue);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .contact-card h3 {
+      color: var(--navy);
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .contact-detail {
+      margin: 20px 0;
+    }
+
+    .contact-detail small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .contact-detail a {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .emergency {
+      margin-top: 25px;
+      padding: 15px 18px;
+      border-radius: 8px;
+      background: #fff4e5;
+      color: #714d13;
+      font-size: .9rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0d2d45;
+      color: white;
+      padding: 35px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    footer p {
+      color: #bfd0db;
+      font-size: .9rem;
+    }
+
+    .footer-phone {
+      font-weight: 700;
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .doctor-cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .announcement-content {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        padding: 15px 0;
+      }
+
+      .announcement-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+      }
+
+      .announcement strong {
+        font-size: 1.05rem;
+      }
+
+      .announcement span {
+        font-size: .9rem;
+      }
+
+      .announcement a {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 5px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+        width: 100%;
+      }
+
+      .hero-card,
+      .about-box,
+      .contact-card {
+        padding: 25px;
+      }
+
+      .hours-row {
+        padding: 15px;
+      }
+
+      .doctor-card {
+        padding: 25px;
+      }
+
+      .doctor-avatar {
+        width: 65px;
+        height: 65px;
+        flex-basis: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        <span class="logo-icon">+</span>
+        <span>Fort Medical Clinic</span>
+      </a>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#about">About</a>
+        <a href="#hours">Hours</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:7804761388" class="nav-button">
+          Call Clinic
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- NEW PATIENT / WALK-IN ANNOUNCEMENT -->
+
+  <div class="announcement">
+    <div class="container announcement-content">
+
+      <div class="announcement-icon">✓</div>
+
+      <div>
+        <strong>NOW ACCEPTING NEW PATIENTS</strong>
+        <span>
+          Walk-ins are welcome during clinic hours.
+        </span>
+      </div>
+
+      <a href="tel:7804761388">
+        Call 780-476-1388
+      </a>
+
+    </div>
+  </div>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+
+          <span class="eyebrow">
+            Family Medicine Practice
+          </span>
+
+          <h1>
+            Your family's health,
+            our priority.
+          </h1>
+
+          <p>
+            Fort Medical Clinic provides family medicine and
+            primary care in Edmonton, Alberta.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              href="tel:7804761388"
+              class="button button-primary"
+            >
+              Call 780-476-1388
+            </a>
+
+            <a
+              href="#contact"
+              class="button button-secondary"
+            >
+              Clinic Information
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <h2>Clinic Information</h2>
+
+          <div class="info-row">
+
+            <div class="info-icon">⌖</div>
+
+            <div>
+              <strong>Visit Us</strong>
+
+              <span>
+                6603 132 Ave NW<br>
+                Edmonton, AB T5C 2A4
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-icon">☎</div>
+
+            <div>
+              <strong>Call Us</strong>
+
+              <span>
+                <a href="tel:7804761388">
+                  780-476-1388
+                </a>
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-icon">◷</div>
+
+            <div>
+
+              <strong>Weekday Hours</strong>
+
+              <span>
+                Monday–Thursday: 9:00 AM–5:00 PM<br>
+                Friday: 9:00 AM–4:00 PM
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Primary Care
+          </span>
+
+          <h2>
+            Family Medicine
+          </h2>
+
+          <p>
+            Medical care for everyday health needs, ongoing care,
+            and general family medicine.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <div class="card">
+
+            <div class="card-icon">
+              ♡
+            </div>
+
+            <h3>
+              Family Medicine
+            </h3>
+
+            <p>
+              Primary medical care for individuals and families,
+              including routine health concerns and follow-up care.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-icon">
+              +
+            </div>
+
+            <h3>
+              General Medical Care
+            </h3>
+
+            <p>
+              Assessment and management of common health concerns
+              and medical needs.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-icon">
+              ✓
+            </div>
+
+            <h3>
+              Ongoing Care
+            </h3>
+
+            <p>
+              Follow-up visits and continuing care for established
+              patients and their health needs.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DOCTORS -->
+
+    <section id="doctors" class="doctors-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Our Physicians
+          </span>
+
+          <h2>
+            Our Family Physicians
+          </h2>
+
+          <p>
+            Fort Medical Clinic provides family medicine and primary
+            care to individuals and families in the Edmonton community.
+          </p>
+
+        </div>
+
+
+        <div class="doctor-cards">
+
+
+          <div class="doctor-card">
+
+            <div class="doctor-avatar">
+              AD
+            </div>
+
+            <div>
+
+              <h3>
+                Dr. Anne Draginda
+              </h3>
+
+              <p class="doctor-title">
+                Female Family Physician
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="doctor-card">
+
+            <div class="doctor-avatar">
+              KS
+            </div>
+
+            <div>
+
+              <h3>
+                Dr. Kareemat Savage
+              </h3>
+
+              <p class="doctor-title">
+                Female Family Physician
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="doctor-card">
+
+            <div class="doctor-avatar">
+              MN
+            </div>
+
+            <div>
+
+              <h3>
+                Dr. Miguel Nunez
+              </h3>
+
+              <p class="doctor-title">
+                Family Physician
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="doctor-card">
+
+            <div class="doctor-avatar">
+              LB
+            </div>
+
+            <div>
+
+              <h3>
+                Dr. Luis Baptista
+              </h3>
+
+              <p class="doctor-title">
+                Family Physician
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="light-section about">
+
+      <div class="container about-grid">
+
+        <div>
+
+          <span class="eyebrow">
+            About The Clinic
+          </span>
+
+          <h2>
+            Fort Medical Clinic
+          </h2>
+
+          <p>
+            Fort Medical Clinic is a family medicine practice
+            located in northeast Edmonton.
+          </p>
+
+          <p>
+            Our clinic is focused on providing accessible primary
+            medical care to patients and families in the community.
+          </p>
+
+
+          <ul class="check-list">
+
+            <li>
+              Family medicine and primary care
+            </li>
+
+            <li>
+              Convenient Edmonton location
+            </li>
+
+            <li>
+              Weekday clinic hours
+            </li>
+
+            <li>
+              Walk-ins welcome during clinic hours
+            </li>
+
+            <li>
+              Now accepting new patients
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="about-box">
+
+          <h3>
+            New patients are welcome.
+          </h3>
+
+          <p>
+            Fort Medical Clinic is now accepting new patients.
+            Walk-ins are welcome during clinic hours.
+            Please contact the clinic directly for current
+            availability and appointment information.
+          </p>
+
+          <br>
+
+          <a
+            href="tel:7804761388"
+            class="button button-primary"
+          >
+            Call 780-476-1388
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOURS -->
+
+    <section id="hours">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            When We're Open
+          </span>
+
+          <h2>
+            Clinic Hours
+          </h2>
+
+          <p>
+            Hours can change. Please call the clinic to confirm
+            availability before visiting.
+          </p>
+
+        </div>
+
+
+        <div class="hours-wrapper">
+
+          <div class="hours-row">
+            <strong>Monday</strong>
+            <span>9:00 AM – 5:00 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Tuesday</strong>
+            <span>9:00 AM – 5:00 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Wednesday</strong>
+            <span>9:00 AM – 5:00 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Thursday</strong>
+            <span>9:00 AM – 5:00 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Friday</strong>
+            <span>9:00 AM – 4:00 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Saturday</strong>
+            <span>Closed</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Sunday</strong>
+            <span>Closed</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Get In Touch
+          </span>
+
+          <h2>
+            Contact Fort Medical Clinic
+          </h2>
+
+          <p>
+            Please contact the clinic directly for appointments,
+            availability, and other questions.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <div class="contact-card">
+
+            <h3>
+              Clinic Information
+            </h3>
+
+
+            <div class="contact-detail">
+
+              <small>
+                Address
+              </small>
+
+              <strong>
+                6603 132 Ave NW<br>
+                Edmonton, AB T5C 2A4
+              </strong>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+              <small>
+                Phone
+              </small>
+
+              <a href="tel:7804761388">
+                780-476-1388
+              </a>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+              <small>
+                Fax
+              </small>
+
+              <strong>
+                780-473-3530
+              </strong>
+
+            </div>
+
+
+            <a
+              href="tel:7804761388"
+              class="button button-primary"
+            >
+              Call the Clinic
+            </a>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <h3>
+              Before Your Visit
+            </h3>
+
+            <p>
+              Please call ahead to confirm clinic hours,
+              appointment availability, and any requirements
+              for your visit.
+            </p>
+
+
+            <div class="emergency">
+
+              <strong>
+                Medical emergency?
+              </strong>
+
+              <br>
+
+              This website is not intended for emergencies.
+              If you are experiencing a medical emergency,
+              seek emergency medical care immediately.
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+
+        <strong>
+          Fort Medical Clinic
+        </strong>
+
+        <p>
+          Family Medicine Practice · Edmonton, Alberta
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <a
+          href="tel:7804761388"
+          class="footer-phone"
+        >
+          780-476-1388
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
+```
